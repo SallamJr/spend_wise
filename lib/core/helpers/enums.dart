@@ -1,0 +1,1 @@
+enum GenericStatus { initial, loading, updating, updateUI, success, error }
