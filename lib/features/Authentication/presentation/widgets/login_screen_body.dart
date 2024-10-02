@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
 import 'package:spend_wise/core/shared/widgets/custom_text_button.dart';
 import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
@@ -20,13 +21,13 @@ class LoginScreenBody extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const CustomAppBar(text: 'Login'),
+               CustomAppBar(text: 'Login', onPressed: () => context.go('/getstartedScreen'),),
               const Image(image: AssetImage(ImgAssets.email)) ,
               EmailTextFormField(),
               const PasswordTextField(text: 'Password',),
-              GradientButton(text: 'Login', onPressed: (){}),
+              GradientButton(text: 'Login', onPressed: ()=> context.go('/homeScreen')),
               CustomTextButton(text:  'Forgot Password?', onPressed: (){}),
-              CustomTextButton(text:  'Don\'t have an account yet ? Sign Up', onPressed: (){}),
+              CustomTextButton(text:  'Don\'t have an account yet ? Sign Up', onPressed: ()=> context.go('/signupScreen')),
             ],
           ),
         ),

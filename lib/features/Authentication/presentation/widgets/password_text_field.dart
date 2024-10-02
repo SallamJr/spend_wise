@@ -6,6 +6,7 @@ class PasswordTextField extends StatefulWidget {
   const PasswordTextField({super.key, required this.text});
 
   @override
+  // ignore: library_private_types_in_public_api
   _PasswordTextFieldState createState() => _PasswordTextFieldState();
 }
 

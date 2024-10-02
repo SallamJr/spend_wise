@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
@@ -13,6 +14,7 @@ class GetStartedScreenBody extends StatelessWidget {
       body: Center(child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+
           Image.asset(ImgAssets.getStarted),
           Text('Know where your',style: TextStyle(color: AppColors.primaryFonts,
           fontSize: 32,
@@ -33,9 +35,9 @@ class GetStartedScreenBody extends StatelessWidget {
           fontWeight: FontWeight.w400,
           ),),
           const SizedBox(height: 40,),
-          GradientButton(text: 'Sign Up', onPressed: (){}),
+          GradientButton(text: 'Sign Up', onPressed: () => context.go('/signupScreen')),
         
-          GradientButton(text: 'Login', onPressed: (){}),
+          GradientButton(text: 'Login', onPressed: () => context.go('/loginScreen')),
           
         ],
       ),),

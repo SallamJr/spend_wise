@@ -12,8 +12,8 @@ class CustomFloatingActionButton extends StatelessWidget {
         onPressed: () {
           // Add your onPressed code here!
         },
-        backgroundColor: AppColors.primaryCards,
-        child: Icon(Icons.add,color: AppColors.primaryButtons,)
+        backgroundColor: AppColors.secondaryBackground,
+        child: Icon(Icons.add,color: AppColors.pressedIcons,)
       ),
     
           );

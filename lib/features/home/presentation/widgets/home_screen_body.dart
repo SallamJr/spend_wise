@@ -9,15 +9,15 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      bottomNavigationBar: CustomBottomNavBar(),
-      floatingActionButton: CustomFloatingActionButton(),
+    return Scaffold(
+      bottomNavigationBar: const CustomBottomNavBar(),
+      floatingActionButton: const CustomFloatingActionButton(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            CustomAppBar(text: 'Home'),
-            CustomCard(text: "march"),
+            CustomAppBar(text: 'Home', onPressed: () {  },),
+            const CustomCard(text: "march"),
             
           ]
         ),

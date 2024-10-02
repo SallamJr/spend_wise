@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 
@@ -21,6 +23,8 @@ class WelcomeScreenBody extends StatelessWidget {
             fontSize: 34,
             fontWeight: FontWeight.bold,
             ),),
+            const SizedBox(height: 20,),
+            GradientButton(text: 'Get Started', onPressed: () => context.go('/onboardingScreen')),
           ],
         ),
 

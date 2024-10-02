@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
 import 'package:spend_wise/core/shared/widgets/custom_text_button.dart';
 import 'package:spend_wise/core/shared/widgets/custom_text_form_field.dart';
@@ -20,17 +21,17 @@ class SignUpScreenBody extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const CustomAppBar(text: 'Sign Up'),
+               CustomAppBar(text: 'Sign Up', onPressed: () => context.go('/getstartedScreen')),
              CustomTextFormField(text: "First Name"),
              CustomTextFormField(text: "Last Name"),
               EmailTextFormField(),
               const PasswordTextField(text: 'Password',),
               const PasswordTextField(text: 'Confirm Password',),
-              GradientButton(text: 'Sign Up', onPressed: (){}),
+              GradientButton(text: 'Sign Up', onPressed: ()=> context.go('/homeScreen')),
               const SizedBox(height: 8,),
               Text("Or With",style: TextStyle(color: AppColors.secondaryFonts,fontWeight: FontWeight.w600,fontSize: 15),),
-              GoogleSignWith(text: 'Sign Up with Google', onPressed: (){}),
-              CustomTextButton(text: 'Aleardy have an account?  Login', onPressed:(){}),
+              GoogleSignWith(text: 'Sign Up with Google', onPressed: ()=> context.go('/homeScreen')),
+              CustomTextButton(text: 'Aleardy have an account?  Login', onPressed:()=> context.go('/loginScreen')),
               
             ],
           ),

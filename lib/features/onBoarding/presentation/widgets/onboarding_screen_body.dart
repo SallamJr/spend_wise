@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
@@ -10,6 +11,7 @@ class OnboardingScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: AppColors.primary,
+      // appBar: CustomAppBar(text: "Spend Wise"),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +35,7 @@ class OnboardingScreenBody extends StatelessWidget {
             fontWeight: FontWeight.w400,
             ),),
             const SizedBox(height: 40,),
-            GradientButton(text: 'Get Started', onPressed: (){}),
+            GradientButton(text: 'Let\'s save money', onPressed: () => context.go('/getstartedScreen')),
 
           ],
         ),
