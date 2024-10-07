@@ -11,12 +11,13 @@ import 'package:spend_wise/features/Authentication/data/repositories/auth_reposi
 import 'package:jwt_decoder/jwt_decoder.dart';
 part 'login_state.dart';
 
-
 class LoginCubit extends Cubit<LoginState> {
-  LoginCubit(super.initialState, {
+  LoginCubit({
     this.api,
     this.authRepository,
-  });
+  }) : super(
+          LoginState.initial(),
+        );
   final BaseApiConsumer? api;
   final BaseAuthRepository? authRepository;
   LoginModel? loginUser;
@@ -38,7 +39,7 @@ class LoginCubit extends Cubit<LoginState> {
         ApiKeys.userAuthPassword: loginPasswordController.text,
       });
 
-      loginResponse?.fold(
+      loginResponse!.fold(
         (error) {
           // Handle the error case
           emit(state.copyWith(status: GenericStatus.error, message: error));

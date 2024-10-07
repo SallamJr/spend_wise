@@ -48,8 +48,19 @@ class SignupModel extends Equatable {
   final DateTime? createdAt;
   final DateTime? updatedAt;
 
-  factory SignupModel.fromJson(Map<String, dynamic> json) =>
-      _$SignupModelFromJson(json);
+  factory SignupModel.fromJson(Map<String, dynamic> json) {
+    // Validate date strings
+    if (json['createdAt'] != null && !isValidDateString(json['createdAt'])) {
+      throw const FormatException('Invalid date format for createdAt');
+    }
+    if (json['updatedAt'] != null && !isValidDateString(json['updatedAt'])) {
+      throw const FormatException('Invalid date format for updatedAt');
+    }
+
+    return _$SignupModelFromJson(json);
+  }
+  // factory SignupModel.fromJson(Map<String, dynamic> json) =>
+  //     _$SignupModelFromJson(json);
 
   @override
   List<Object?> get props => [
@@ -83,4 +94,12 @@ class ProfilePhoto extends Equatable {
         url,
         publicId,
       ];
+}
+bool isValidDateString(String dateString) {
+  try {
+    DateTime.parse(dateString);
+    return true;
+  } catch (e) {
+    return false;
+  }
 }

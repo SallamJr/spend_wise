@@ -23,7 +23,9 @@ class LoginScreenBody extends StatelessWidget {
             children: [
                CustomAppBar(text: 'Login', onPressed: () => context.go('/getstartedScreen'),),
               const Image(image: AssetImage(ImgAssets.email)) ,
-              EmailTextFormField(),
+              EmailTextFormField(
+                //  controller: context.read<LoginCubit>().loginEmailController,
+              ),
               const PasswordTextField(text: 'Password',),
               GradientButton(text: 'Login', onPressed: ()=> context.go('/homeScreen')),
               CustomTextButton(text:  'Forgot Password?', onPressed: (){}),

@@ -6,6 +6,7 @@ import 'package:spend_wise/core/api/api_consumer.dart';
 import 'package:spend_wise/core/api/dio_consumer.dart';
 import 'package:spend_wise/core/helpers/network_info.dart';
 import 'package:spend_wise/features/Authentication/data/repositories/auth_repository.dart';
+import 'package:spend_wise/features/Authentication/presentation/controllers/login_cubit.dart';
 import 'package:spend_wise/features/Authentication/presentation/controllers/signup_cubit.dart';
 import 'package:spend_wise/features/category/data/repositories/category_repository.dart';
 import 'package:spend_wise/features/expenses/data/repositories/expenses_repository.dart';
@@ -64,8 +65,12 @@ Future<void> setup() async {
   );
 
   //login cubit
-  // locator.registerFactory(
-  //     () => LoginCubit(api: locator(), authRepository: locator()));
+  locator.registerFactory(
+    () => LoginCubit(
+      api: locator(),
+      authRepository: locator(),
+    ),
+  );
   // home cubit
 
   //! Features....DataSources

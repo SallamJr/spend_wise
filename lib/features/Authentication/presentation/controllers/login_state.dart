@@ -11,13 +11,13 @@ class LoginState extends Equatable {
   final GenericStatus status;
   final LoginModel? data;
 
-  // factory LoginState.initial() {
-  //   return const LoginState(
-  //     message: '',
-  //     status: GenericStatus.initial,
-  //     data: null,
-  //   );
-  // }
+  factory LoginState.initial() {
+    return const LoginState(
+      message: '',
+      status: GenericStatus.initial,
+      data: null,
+    );
+  }
 
   LoginState copyWith({
     String? message,
