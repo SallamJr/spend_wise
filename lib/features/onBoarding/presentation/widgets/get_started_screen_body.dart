@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
+import 'package:spend_wise/core/utils/app_strings.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 
 class GetStartedScreenBody extends StatelessWidget {
@@ -16,28 +17,28 @@ class GetStartedScreenBody extends StatelessWidget {
         children: [
 
           Image.asset(ImgAssets.getStarted),
-          Text('Know where your',style: TextStyle(color: AppColors.primaryFonts,
+          Text(AppStrings.knowWhereYour,style: TextStyle(color: AppColors.primaryFonts,
           fontSize: 32,
           fontWeight: FontWeight.bold,
           ),),
           
-          Text('money goes',style: TextStyle(color: AppColors.primaryFonts,
+          Text(AppStrings.moneyGoes,style: TextStyle(color: AppColors.primaryFonts,
           fontSize: 32,
           fontWeight: FontWeight.bold,
           ),),
           const SizedBox(height: 20,),
-          Text('Track your transaction easily,',style: TextStyle(color: AppColors.secondaryFonts,
+          Text(AppStrings.trackYourTransactionEasily,style: TextStyle(color: AppColors.secondaryFonts,
           fontSize: 16,
           fontWeight: FontWeight.w400,
           ),),
-          Text('with categories and financial report',style: TextStyle(color: AppColors.secondaryFonts,
+          Text(AppStrings.withCategoriesAndFinancialReport,style: TextStyle(color: AppColors.secondaryFonts,
           fontSize: 16,
           fontWeight: FontWeight.w400,
           ),),
           const SizedBox(height: 40,),
-          GradientButton(text: 'Sign Up', onPressed: () => context.go('/signupScreen')),
+          GradientButton(text: AppStrings.signup, onPressed: () => context.go('/signupScreen')),
         
-          GradientButton(text: 'Login', onPressed: () => context.go('/loginScreen')),
+          GradientButton(text: AppStrings.login, onPressed: () => context.go('/loginScreen')),
           
         ],
       ),),

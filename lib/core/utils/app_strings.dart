@@ -1,5 +1,40 @@
 class AppStrings {
-  static const String appName = 'Expenses Tracker';
+  static const String appName = 'Spend Wise';
+  static const String login = 'Login';
+  static const String email = 'Email';
+  static const String name = 'Name';
+  static const String firstName = 'First Name';
+  static const String lastName = 'Last Name';
+  static const String enterEmail = 'Please enter your email';
+  static const String invalidEmail = 'Please enter a valid email address';
+  static const String enterPassword = 'Please enter your password';
+  static const String enterName = 'Please enter your name';
+  static const String getStarted = 'Get Started';
+  static const String password = 'Password';
+  static const String signup = 'Sign Up';
+  static const String profile = 'Profile';
+  static const String account = 'Account';
+  static const String home = 'Home';
+  static const String welcome = 'Welcome';
+  static const String hello = 'Hello';
+  static const String welcomeBack = 'Welcome Back';
+  static const String loginToContinue = 'Login to continue';
+  static const String category = 'Category';
+  static const String categoryName = 'Category Name';
+  static const String expenseName = 'Expense Name';
+  static const String expenseValue = 'Expense Value';
+  static const String expenseCategory = 'Expense Category';
+  static const String expenseDescription = 'Expense Description';
+  static const String image = 'Image';
+  static const String categories = 'Categories';
+  static const String addCategory = 'Add Category';
+  static const String expenses = 'Expenses';
+  static const String addExpense = 'Add Expense';
+  static const String add = 'Add';
+  static const String exportData = 'Export Data';
+  static const String about = 'About';
+  static const String profileSettings = 'Profile Settings';
+  static const String logout = 'Log Out';
   static const String initHomeScr = 'No categories added yet';
   static const String fontFamily = 'Tajawal';
   static const String noRouteFound = 'No Route Found';
@@ -12,6 +47,53 @@ class AppStrings {
   static const String englishCode = 'en';
   static const String arabicCode = 'ar';
   static const String locale = 'locale';
+  static const String errorMsg = 'Something went wrong';
+  static const String successMsg = 'Success';
+  static const String tryAgain = 'Try Again';
+  static const String ok = 'Ok';
+  static const String orWith = 'Or With';
+  static const String cancel = 'Cancel';
+  static const String error = 'Error';
+  static const String errorScreen = 'Reload Screen';
+  static const String pleaseEnterEmail = 'Please Enter Email';
+  static const String pleaseEnterPassword = 'Please Enter Password';
+  static const String pleaseEnterName = 'Please Enter Name';
+  static const String forgotPassword = 'Forgot Password';
+  static const String resetPassword = 'Reset Password';
+  static const String newPassword = 'New Password';
+  static const String retypeNewPassword = 'Retype New Password';
+  static const String confirmPassword = 'Confirm Password';
+  static const String forgotPasswordInstruction = 'Don\'t have an account yet ? Sign Up';
+  static const String googleSignWith = 'Sign Up with Google';
+  static const String havingAccount = 'Aleardy have an account?  Login';
+  static const String forgotPasswordQuestion = 'Forgot Password ?';
+  static const String continueBtn = 'Continue';
   static const String signinGreeting =
       'manage spending habits,stay within budget and achieve financial goals.';
+  static const String forgotPasswordDescription =
+      'Don\'t worry. Enter your email and we\'ll send you a link to reset your password.';
+  static const String emailVerification =
+      'Email Verification';
+  static const String backToLoginBtn =
+      'Back to Login';
+  static const String backToLoginTitle =
+      'Your email is on the way ...';
+  static const String backToLoginDescription =
+      'Check your email and follow the instructions to reset your password and then back to login .';
+  static const String gainTotalControl = 'Gain total control';
+  static const String ofYourMoney = 'of your money';
+  static const String becomeYourOwnMoneyManager = 'Become your own money manager';
+  static const String makeEveryCentCount = 'and make every cent count';
+  static const String letsSaveMoney = 'Let\'s save money';
+  static const String knowWhereYour = 'Know where your';
+  static const String moneyGoes = 'money goes';
+  static const String trackYourTransactionEasily = 'Track your transaction easily,';
+  static const String withCategoriesAndFinancialReport = 'with categories and financial report';
+  static const String currency = 'Currency';
+  static const String language = 'Language';
+  static const String darkMode = 'Dark Mode';
+  static const String lightMode = 'Light Mode';
+  static const String arabic = 'Arabic';
+  static const String english = 'English';
+  static const String themes = 'Themes';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spend_wise/core/utils/app_strings.dart';
 
 class NoFoundedRoute extends StatelessWidget {
   const NoFoundedRoute({super.key});
@@ -9,7 +10,7 @@ class NoFoundedRoute extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Center(
         child: Text(
-          'No founded Route',
+          AppStrings.noRouteFound,
           style: TextStyle(
             color: Colors.white,
             fontSize: 30,

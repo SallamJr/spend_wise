@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:spend_wise/core/utils/app_strings.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({super.key});
@@ -33,22 +34,22 @@ class CustomBottomNavBar extends StatelessWidget {
           tabs: [
             GButton(
               icon: IconlyBold.home,       // Home icon
-              text: 'Home',
+              text: AppStrings.home,
               onPressed: () => context.go('/homeScreen'),
             ),
              GButton(
               icon: IconlyBold.category,     // Search icon
-              text: 'Category',
+              text: AppStrings.category,
               onPressed: () => context.go('/categoryScreen'),
             ),
              GButton(
               icon: IconlyBold.wallet,       // Orders icon (replace heart with list icon)
-              text: 'Expenses',
+              text: AppStrings.expenses,
               onPressed: () => context.go('/expensesScreen'),
             ),
              GButton(
               icon: IconlyBold.profile,       // Account icon
-              text: 'Profile',
+              text: AppStrings.profile,
               onPressed: () => context.go('/settingsScreen'),
             ),
           ],

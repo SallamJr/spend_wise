@@ -1,40 +1,7 @@
-// import 'package:flutter/material.dart';
-// import 'package:spend_wise/core/utils/app_colors.dart';
-
-// class CustomTextField extends StatelessWidget {
-//   final String text;
-//   const CustomTextField({super.key, required this.text});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.all(16.0),
-//       child: TextField(
-//         decoration: InputDecoration(
-//           hintText: text,
-//           hintStyle:  TextStyle(color: AppColors.secondaryFonts),
-//           filled: true,
-//           fillColor: AppColors.primary,
-//           border: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(30.0),
-//             borderSide:  BorderSide(color: AppColors.primaryButtons),
-//           ),
-//           enabledBorder: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(30.0),
-//             borderSide:  BorderSide(color: AppColors.primaryButtons),
-//           ),
-//           focusedBorder: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(30.0),
-//             borderSide:  BorderSide(color: AppColors.primaryButtons),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import 'package:spend_wise/core/shared/functions/custom_snack_bar.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
+import 'package:spend_wise/core/utils/app_strings.dart';
 
 class EmailTextFormField extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -50,7 +17,7 @@ class EmailTextFormField extends StatelessWidget {
         child: TextFormField(
           cursorColor: AppColors.primaryButtons,
           decoration: InputDecoration(
-            hintText: 'Email',
+            hintText: AppStrings.email,
             hintStyle:  TextStyle(color:AppColors.secondaryFonts),
             filled: true,
             fillColor: Colors.white,
@@ -69,14 +36,14 @@ class EmailTextFormField extends StatelessWidget {
           ),
           validator: (value) {
             if (value == null || value.isEmpty) {
-              showCustomSnackbar(context, 'Please enter your email');
-              return 'Please enter your email';
+              showCustomSnackbar(context, AppStrings.enterEmail);
+              return AppStrings.enterEmail;
             }
             // Regular expression for email validation
             final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
             if (!emailRegex.hasMatch(value)) {
-              showCustomSnackbar(context, 'Please enter a valid email address');
-              return 'Please enter a valid email address';
+              showCustomSnackbar(context, AppStrings.invalidEmail);
+              return AppStrings.invalidEmail;
             }
             return null;
           },
