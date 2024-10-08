@@ -10,7 +10,7 @@ import 'package:spend_wise/features/home/data/repositories/home_repository.dart'
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit(this.api, this.homeRepository, this.homeModel, ) : super(const HomeState());
+  HomeCubit( {required this.api, required this.homeRepository}  ) : super(const HomeState());
   final BaseApiConsumer api;
   final BaseHomeRepository homeRepository;
   HomeModel? homeModel;

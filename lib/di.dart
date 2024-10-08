@@ -9,8 +9,11 @@ import 'package:spend_wise/features/Authentication/data/repositories/auth_reposi
 import 'package:spend_wise/features/Authentication/presentation/controllers/login_cubit.dart';
 import 'package:spend_wise/features/Authentication/presentation/controllers/signup_cubit.dart';
 import 'package:spend_wise/features/category/data/repositories/category_repository.dart';
+import 'package:spend_wise/features/category/presentation/controllers/category_cubit.dart';
 import 'package:spend_wise/features/expenses/data/repositories/expenses_repository.dart';
+import 'package:spend_wise/features/expenses/presentation/controllers/expenses_cubit.dart';
 import 'package:spend_wise/features/home/data/repositories/home_repository.dart';
+import 'package:spend_wise/features/home/presentation/controllers/home_cubit.dart';
 
 final locator = GetIt.instance;
 
@@ -41,37 +44,60 @@ Future<void> setup() async {
     )..init(),
   );
 
-  //! Features
-  //Repositories...
-  // Auth Feature
+  //! Features ....Repositories
+  
+  // Auth Feature...Repository
   locator.registerLazySingleton<BaseAuthRepository>(
     () => AuthRepository(
       apiConsumer: locator(),
     ),
   );
-  // Home Feature
+  // Home Feature...Repository
   locator.registerLazySingleton(() => HomeRepository(apiConsumer: locator()));
-  //Category Feature
+  //Category Feature...Repository
   locator
       .registerLazySingleton(() => CategoryRepository(apiConsumer: locator()));
-  // Expenses Feature
+  // Expenses Feature...Repository
   locator
       .registerLazySingleton(() => ExpensesRepository(apiConsumer: locator()));
 
   //! Features....Cubits
   //signup cubit
-  locator.registerFactory(
+  locator.registerLazySingleton(
     () => SignupCubit(api: locator(), authRepo: locator()),
   );
 
   //login cubit
-  locator.registerFactory(
+  locator.registerLazySingleton(
     () => LoginCubit(
       api: locator(),
       authRepository: locator(),
     ),
   );
   // home cubit
+ locator.registerLazySingleton(
+    () => HomeCubit(
+      homeRepository: locator(),
+       api:locator(),
+    ),
+  );
+ //category cubit
+  locator.registerLazySingleton(
+    () => CategoryCubit(
+      categoryRepository: locator(),
+       api:locator(),
+    ),
+  );
+
+ //expenses cubit
+  locator.registerLazySingleton(
+    () => ExpensesCubit(
+      expensesRepository: locator(),
+       api:locator(),
+    ),
+  );
+ 
+  
 
   //! Features....DataSources
 }
