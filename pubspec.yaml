@@ -1,6 +1,6 @@
 name: spend_wise
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -16,12 +16,17 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.6
   flutter_iconly: ^1.0.2
+  flutter_localization: ^0.2.2
+  flutter_localizations:
+    sdk: flutter
   flutter_svg: ^2.0.10+1
   get_it: ^8.0.0
   go_router: ^14.2.8
   google_nav_bar: ^5.0.6
   iconly: ^1.0.1
   internet_connection_checker: ^1.0.0+1
+  intl: ^0.19.0
+  intl_utils: ^2.8.7
   json_annotation: ^4.9.0
   json_serializable: ^6.8.0
   jwt_decoder: ^2.0.1
@@ -37,3 +42,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/lang/
+flutter_intl:
+  enabled: true

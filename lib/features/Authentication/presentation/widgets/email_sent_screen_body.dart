@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
 import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
-import 'package:spend_wise/core/utils/app_strings.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
+import 'package:spend_wise/generated/l10n.dart';
 
 class EmailSentScreenBody extends StatelessWidget {
   const EmailSentScreenBody({super.key});
@@ -17,16 +17,16 @@ class EmailSentScreenBody extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-        CustomAppBar(text: AppStrings.emailVerification, onPressed: ()=> context.go('/loginScreen') ,),
+        CustomAppBar(text: S.of(context).emailVerification, onPressed: ()=> context.go('/loginScreen') ,),
         const Image(image: AssetImage(ImgAssets.email)) ,
-        Text(AppStrings.backToLoginTitle,style: TextStyle(color: AppColors.primaryFonts,
+        Text(S.of(context).backToLoginTitle,style: TextStyle(color: AppColors.primaryFonts,
         fontSize: 24),),
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Text(AppStrings.backToLoginDescription,style: TextStyle(color: AppColors.primaryFonts,
+          child: Text(S.of(context).backToLoginDescription,style: TextStyle(color: AppColors.primaryFonts,
             fontSize: 16),),
         ),
-        GradientButton(text: AppStrings.backToLoginBtn, onPressed: ()=> context.go('/resetPasswordScreen')),
+        GradientButton(text: S.of(context).backToLoginBtn, onPressed: ()=> context.go('/resetPasswordScreen')),
         
           ]
         ),

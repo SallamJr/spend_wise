@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
-import 'package:spend_wise/core/utils/app_strings.dart';
 import 'package:spend_wise/core/utils/media_query_values.dart';
+import 'package:spend_wise/generated/l10n.dart';
 
 class ErrorWidget extends StatelessWidget {
   final VoidCallback? onPress;
@@ -22,15 +22,15 @@ class ErrorWidget extends StatelessWidget {
         ),
         Container(
           margin: const EdgeInsets.symmetric(vertical: 12),
-          child: const Text(
-            AppStrings.errorMsg,
+          child: Text(
+            S.of(context).errorMsg,
             //AppLocalizations.of(context)!.translate('something_went_wrong')!,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.w700),
           ),
         ),
         Text(
-          AppStrings.tryAgain,
+          S.of(context).tryAgain,
           // AppLocalizations.of(context)!.translate('try_again')!,
           style: TextStyle(
               color: AppColors.primaryFonts,
@@ -48,11 +48,11 @@ class ErrorWidget extends StatelessWidget {
                 elevation: 500,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50))),
-            child: const Text(
-              AppStrings.errorScreen,
+            child: Text(
+              S.of(context).errorScreen,
               // will be handle the localization ....
               //AppLocalizations.of(context)!.translate('reload_screen')!,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.w700),

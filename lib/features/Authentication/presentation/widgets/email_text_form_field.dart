@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spend_wise/core/shared/functions/custom_snack_bar.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
-import 'package:spend_wise/core/utils/app_strings.dart';
+import 'package:spend_wise/generated/l10n.dart';
 
 class EmailTextFormField extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -17,33 +17,33 @@ class EmailTextFormField extends StatelessWidget {
         child: TextFormField(
           cursorColor: AppColors.primaryButtons,
           decoration: InputDecoration(
-            hintText: AppStrings.email,
-            hintStyle:  TextStyle(color:AppColors.secondaryFonts),
+            hintText: S.of(context).email,
+            hintStyle: TextStyle(color: AppColors.secondaryFonts),
             filled: true,
-            fillColor: Colors.white,
+            fillColor: AppColors.primary,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: AppColors.primaryButtons),
+              borderSide: BorderSide(color: AppColors.primaryButtons),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: AppColors.primaryButtons),
+              borderSide: BorderSide(color: AppColors.primaryButtons),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: AppColors.primaryButtons),
+              borderSide: BorderSide(color: AppColors.primaryButtons),
             ),
           ),
           validator: (value) {
             if (value == null || value.isEmpty) {
-              showCustomSnackbar(context, AppStrings.enterEmail);
-              return AppStrings.enterEmail;
+              showCustomSnackbar(context, S.of(context).enterEmail);
+              return S.of(context).enterEmail;
             }
             // Regular expression for email validation
             final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
             if (!emailRegex.hasMatch(value)) {
-              showCustomSnackbar(context, AppStrings.invalidEmail);
-              return AppStrings.invalidEmail;
+              showCustomSnackbar(context, S.of(context).invalidEmail);
+              return S.of(context).invalidEmail;
             }
             return null;
           },

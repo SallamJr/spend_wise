@@ -4,9 +4,12 @@ import 'package:spend_wise/config/routes/routes_configurations.dart';
 import 'package:spend_wise/config/themes/app_theme.dart';
 import 'package:spend_wise/di.dart' as di;
 import 'package:spend_wise/features/Authentication/presentation/controllers/login_cubit.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:spend_wise/generated/l10n.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -18,6 +21,15 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         routerConfig: router,
         debugShowCheckedModeBanner: false,
+        //default locale for the app
+        locale: const Locale('ar'),
+        supportedLocales: S.delegate.supportedLocales,
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
         theme: lightThemeData(),
         darkTheme: darkThemeData(),
       ),

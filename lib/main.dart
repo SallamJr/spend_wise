@@ -7,7 +7,7 @@ import 'package:spend_wise/di.dart' as locator;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // await dotenv.load(fileName: ".env");
-  await locator.setup();
+  await locator.setup(); // Default to English
   Bloc.observer = AppBlocObserver();
   runApp(
     const MyApp(),

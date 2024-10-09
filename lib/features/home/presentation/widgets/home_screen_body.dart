@@ -3,6 +3,7 @@ import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
 import 'package:spend_wise/core/shared/widgets/custom_bottom_nav_bar.dart';
 import 'package:spend_wise/features/home/presentation/widgets/custom_card.dart';
 import 'package:spend_wise/features/home/presentation/widgets/custom_floating_action_button.dart';
+import 'package:spend_wise/generated/l10n.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -13,15 +14,14 @@ class HomeScreenBody extends StatelessWidget {
       bottomNavigationBar: const CustomBottomNavBar(),
       floatingActionButton: const CustomFloatingActionButton(),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            CustomAppBar(text: 'Home', onPressed: () {  },),
-            const CustomCard(text: "march"),
-            
-          ]
-        ),
-    ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+          CustomAppBar(
+            text: S.of(context).home,
+            onPressed: () {},
+          ),
+          CustomCard(text: S.of(context).categoryName),
+        ]),
+      ),
     );
   }
 }
