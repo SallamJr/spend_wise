@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         routerConfig: router,
         debugShowCheckedModeBanner: false,
         //default locale for the app
-        locale: const Locale('ar'),
+        locale: const Locale('en'),
         supportedLocales: S.delegate.supportedLocales,
         localizationsDelegates: const [
           S.delegate,
