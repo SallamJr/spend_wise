@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/shared/widgets/custom_bottom_nav_bar.dart';
+import 'package:spend_wise/core/widgets/custom_app_bar.dart';
+import 'package:spend_wise/core/widgets/custom_bottom_nav_bar.dart';
 import 'package:spend_wise/features/home/presentation/widgets/custom_card.dart';
 import 'package:spend_wise/features/home/presentation/widgets/custom_floating_action_button.dart';
 import 'package:spend_wise/generated/l10n.dart';
@@ -16,10 +16,10 @@ class HomeScreenBody extends StatelessWidget {
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           CustomAppBar(
-            text: S.of(context).home,
+            text: Localizely.of(context).home,
             onPressed: () {},
           ),
-          CustomCard(text: S.of(context).categoryName),
+          CustomCard(text: Localizely.of(context).categoryName),
         ]),
       ),
     );

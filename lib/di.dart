@@ -4,6 +4,8 @@ import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:spend_wise/core/api/api_consumer.dart';
 import 'package:spend_wise/core/api/dio_consumer.dart';
+import 'package:spend_wise/core/controllers/localization_cubit.dart';
+import 'package:spend_wise/core/controllers/theme_cubit.dart';
 import 'package:spend_wise/core/helpers/network_info.dart';
 import 'package:spend_wise/features/Authentication/data/repositories/auth_repository.dart';
 import 'package:spend_wise/features/Authentication/presentation/controllers/login_cubit.dart';
@@ -45,7 +47,7 @@ Future<void> setup() async {
   );
 
   //! Features ....Repositories
-  
+
   // Auth Feature...Repository
   locator.registerLazySingleton<BaseAuthRepository>(
     () => AuthRepository(
@@ -62,6 +64,14 @@ Future<void> setup() async {
       .registerLazySingleton(() => ExpensesRepository(apiConsumer: locator()));
 
   //! Features....Cubits
+  //localization cubit
+  locator.registerLazySingleton(
+    () => LocalizationCubit(),
+  );
+  //Theme cubit
+  locator.registerLazySingleton(
+    () => ThemeCubit(),
+  );
   //signup cubit
   locator.registerLazySingleton(
     () => SignupCubit(api: locator(), authRepo: locator()),
@@ -75,29 +85,27 @@ Future<void> setup() async {
     ),
   );
   // home cubit
- locator.registerLazySingleton(
+  locator.registerLazySingleton(
     () => HomeCubit(
       homeRepository: locator(),
-       api:locator(),
+      api: locator(),
     ),
   );
- //category cubit
+  //category cubit
   locator.registerLazySingleton(
     () => CategoryCubit(
       categoryRepository: locator(),
-       api:locator(),
+      api: locator(),
     ),
   );
 
- //expenses cubit
+  //expenses cubit
   locator.registerLazySingleton(
     () => ExpensesCubit(
       expensesRepository: locator(),
-       api:locator(),
+      api: locator(),
     ),
   );
- 
-  
 
   //! Features....DataSources
 }

@@ -10,7 +10,7 @@ class NoFoundedRoute extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Center(
         child: Text(
-          S.of(context).noRouteFound,
+          Localizely.of(context).noRouteFound,
           style: const TextStyle(
             color: Colors.white,
             fontSize: 30,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
+import 'package:spend_wise/core/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 import 'package:spend_wise/generated/l10n.dart';
@@ -19,7 +19,7 @@ class OnboardingScreenBody extends StatelessWidget {
           children: [
             Image.asset(ImgAssets.onboarding),
             Text(
-              S.of(context).gainTotalControl,
+              Localizely.of(context).gainTotalControl,
               style: TextStyle(
                 color: AppColors.primaryFonts,
                 fontSize: 32,
@@ -27,7 +27,7 @@ class OnboardingScreenBody extends StatelessWidget {
               ),
             ),
             Text(
-              S.of(context).ofYourMoney,
+              Localizely.of(context).ofYourMoney,
               style: TextStyle(
                 color: AppColors.primaryFonts,
                 fontSize: 32,
@@ -38,7 +38,7 @@ class OnboardingScreenBody extends StatelessWidget {
               height: 20,
             ),
             Text(
-              S.of(context).becomeYourOwnMoneyManager,
+              Localizely.of(context).becomeYourOwnMoneyManager,
               style: TextStyle(
                 color: AppColors.secondaryFonts,
                 fontSize: 16,
@@ -46,7 +46,7 @@ class OnboardingScreenBody extends StatelessWidget {
               ),
             ),
             Text(
-              S.of(context).makeEveryCentCount,
+              Localizely.of(context).makeEveryCentCount,
               style: TextStyle(
                 color: AppColors.secondaryFonts,
                 fontSize: 16,
@@ -57,7 +57,7 @@ class OnboardingScreenBody extends StatelessWidget {
               height: 40,
             ),
             GradientButton(
-                text: S.of(context).letsSaveMoney,
+                text: Localizely.of(context).letsSaveMoney,
                 onPressed: () => context.go('/getstartedScreen')),
           ],
         ),

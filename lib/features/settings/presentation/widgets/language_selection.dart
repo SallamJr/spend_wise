@@ -1,59 +1,71 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spend_wise/core/controllers/localization_cubit.dart';
+import 'package:spend_wise/core/controllers/localization_state.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
-class LanguageSelect extends StatefulWidget {
-  const LanguageSelect({super.key});
+class LanguageSelection extends StatefulWidget {
+  const LanguageSelection({super.key});
 
   @override
   LanguageSelectState createState() => LanguageSelectState();
 }
 
-class LanguageSelectState extends State<LanguageSelect> {
-  String selectedLanguage = '';
+class LanguageSelectState extends State<LanguageSelection> {
   List<Map<String, String>> languages = [];
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // Move the logic that depends on inherited widgets here
-    selectedLanguage = S.of(context).englishCode;
+    
+    // Initialize languages list
     languages = [
-      {'name': S.of(context).english, 'code': S.of(context).englishCode},
-      {'name': S.of(context).arabic, 'code': S.of(context).arabicCode},
+      {
+        'name': Localizely.of(context).english,
+        'code': Localizely.of(context).englishCode
+      },
+      {
+        'name': Localizely.of(context).arabic,
+        'code': Localizely.of(context).arabicCode
+      },
     ];
   }
 
   Widget languageWidget(String name, String code) {
-    return ListTile(
-      title: Text(
-        name,
-        style: TextStyle(
-            color: AppColors.primaryFonts,
-            fontWeight: FontWeight.bold,
-            fontSize: 18),
-      ),
-      subtitle: Text(
-        '($code)',
-        style: TextStyle(
-            color: AppColors.primaryFonts,
-            fontWeight: FontWeight.w400,
-            fontSize: 12),
-      ),
-      trailing: Radio(
-        value: code,
-        activeColor: AppColors.pressedIcons,
-        groupValue: selectedLanguage,
-        onChanged: (String? value) {
-          setState(() {
-            selectedLanguage = value!;
-          });
-        },
-      ),
-      onTap: () {
-        setState(() {
-          selectedLanguage = code;
-        });
+    return BlocBuilder<LocalizationCubit, LocalizationState>(
+      builder: (context, state) {
+        return ListTile(
+          title: Text(
+            name,
+            style: TextStyle(
+              color: AppColors.primaryFonts,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+          ),
+          subtitle: Text(
+            '($code)',
+            style: TextStyle(
+              color: AppColors.primaryFonts,
+              fontWeight: FontWeight.w400,
+              fontSize: 12,
+            ),
+          ),
+          trailing: Radio(
+            value: code,
+            activeColor: AppColors.pressedIcons,
+            groupValue: state.locale.languageCode, // Use cubit's locale
+            onChanged: (String? value) {
+              if (value != null) {
+                context.read<LocalizationCubit>().changeLocale(Locale(value)); // Change the locale
+              }
+            },
+          ),
+          onTap: () {
+            context.read<LocalizationCubit>().changeLocale(Locale(code)); // Change on tap
+          },
+        );
       },
     );
   }
@@ -65,19 +77,10 @@ class LanguageSelectState extends State<LanguageSelect> {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: languages.length,
       itemBuilder: (context, index) {
-        final currency = languages[index];
-        return languageWidget(currency['name']!, currency['code']!);
+        final language = languages[index];
+        return languageWidget(language['name']!, language['code']!);
       },
     );
   }
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Expanded(
-  //     child: ListView(
-  //       children: languages.map((lang) {
-  //         return languageWidget(lang['name']!, lang['code']!);
-  //       }).toList(),
-  //     ),
-  //   );
-  // }
 }
+

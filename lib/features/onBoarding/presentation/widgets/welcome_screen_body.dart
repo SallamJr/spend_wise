@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
+import 'package:spend_wise/core/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 import 'package:spend_wise/generated/l10n.dart';
@@ -18,7 +18,7 @@ class WelcomeScreenBody extends StatelessWidget {
           children: [
             Image.asset(ImgAssets.welcome),
             Text(
-              S.of(context).appName,
+              Localizely.of(context).appName,
               style: TextStyle(
                 color: AppColors.primaryFonts,
                 fontSize: 34,
@@ -29,7 +29,7 @@ class WelcomeScreenBody extends StatelessWidget {
               height: 20,
             ),
             GradientButton(
-                text: S.of(context).getStarted,
+                text: Localizely.of(context).getStarted,
                 onPressed: () => context.go('/onboardingScreen')),
           ],
         ),
