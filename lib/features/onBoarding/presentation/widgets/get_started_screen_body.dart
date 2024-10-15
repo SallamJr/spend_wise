@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
+import 'package:spend_wise/core/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 import 'package:spend_wise/generated/l10n.dart';
@@ -18,7 +18,7 @@ class GetStartedScreenBody extends StatelessWidget {
           children: [
             Image.asset(ImgAssets.getStarted),
             Text(
-              S.of(context).knowWhereYour,
+              Localizely.of(context).knowWhereYour,
               style: TextStyle(
                 color: AppColors.primaryFonts,
                 fontSize: 32,
@@ -26,7 +26,7 @@ class GetStartedScreenBody extends StatelessWidget {
               ),
             ),
             Text(
-              S.of(context).moneyGoes,
+              Localizely.of(context).moneyGoes,
               style: TextStyle(
                 color: AppColors.primaryFonts,
                 fontSize: 32,
@@ -37,7 +37,7 @@ class GetStartedScreenBody extends StatelessWidget {
               height: 20,
             ),
             Text(
-              S.of(context).trackYourTransactionEasily,
+              Localizely.of(context).trackYourTransactionEasily,
               style: TextStyle(
                 color: AppColors.secondaryFonts,
                 fontSize: 16,
@@ -45,7 +45,7 @@ class GetStartedScreenBody extends StatelessWidget {
               ),
             ),
             Text(
-              S.of(context).withCategoriesAndFinancialReport,
+              Localizely.of(context).withCategoriesAndFinancialReport,
               style: TextStyle(
                 color: AppColors.secondaryFonts,
                 fontSize: 16,
@@ -56,10 +56,10 @@ class GetStartedScreenBody extends StatelessWidget {
               height: 40,
             ),
             GradientButton(
-                text: S.of(context).signup,
+                text: Localizely.of(context).signup,
                 onPressed: () => context.go('/signupScreen')),
             GradientButton(
-                text: S.of(context).login,
+                text: Localizely.of(context).login,
                 onPressed: () => context.go('/loginScreen')),
           ],
         ),

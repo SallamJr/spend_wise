@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/shared/widgets/custom_bottom_nav_bar.dart';
+import 'package:spend_wise/core/widgets/custom_app_bar.dart';
+import 'package:spend_wise/core/widgets/custom_bottom_nav_bar.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/features/settings/presentation/widgets/custom_list_tile.dart';
 import 'package:spend_wise/generated/l10n.dart';
@@ -22,7 +22,7 @@ class SettingsScreenBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CustomAppBar(
-                text: S.of(context).profile,
+                text: Localizely.of(context).profile,
                 onPressed: () => context.go('/homeScreen'),
               ),
               const SizedBox(height: 16),
@@ -34,14 +34,14 @@ class SettingsScreenBody extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               CustomListTile(
-                  text: S.of(context).account,
+                  text: Localizely.of(context).account,
                   onPressed: () {},
                   icon: IconlyBold.profile),
               Divider(
                 color: AppColors.unSelectedIcons,
               ),
               CustomListTile(
-                text: S.of(context).profileSettings,
+                text: Localizely.of(context).profileSettings,
                 onPressed: () => context.go('/profileSettingsScreen'),
                 icon: IconlyBold.setting,
               ),
@@ -49,21 +49,21 @@ class SettingsScreenBody extends StatelessWidget {
                 color: AppColors.unSelectedIcons,
               ),
               CustomListTile(
-                  text: S.of(context).exportData,
+                  text: Localizely.of(context).exportData,
                   onPressed: () {},
                   icon: IconlyBold.upload),
               Divider(
                 color: AppColors.unSelectedIcons,
               ),
               CustomListTile(
-                  text: S.of(context).about,
+                  text: Localizely.of(context).about,
                   onPressed: () {},
                   icon: IconlyBold.infoSquare),
               Divider(
                 color: AppColors.unSelectedIcons,
               ),
               CustomListTile(
-                text: S.of(context).logout,
+                text: Localizely.of(context).logout,
                 icon: IconlyBold.logout,
                 onPressed: () => context.go('/welcomeScreen'),
               ),

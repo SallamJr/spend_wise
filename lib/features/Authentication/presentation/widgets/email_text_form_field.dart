@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/shared/functions/custom_snack_bar.dart';
+import 'package:spend_wise/core/functions/custom_snack_bar.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
@@ -17,7 +17,7 @@ class EmailTextFormField extends StatelessWidget {
         child: TextFormField(
           cursorColor: AppColors.primaryButtons,
           decoration: InputDecoration(
-            hintText: S.of(context).email,
+            hintText: Localizely.of(context).email,
             hintStyle: TextStyle(color: AppColors.secondaryFonts),
             filled: true,
             fillColor: AppColors.primary,
@@ -36,14 +36,14 @@ class EmailTextFormField extends StatelessWidget {
           ),
           validator: (value) {
             if (value == null || value.isEmpty) {
-              showCustomSnackbar(context, S.of(context).enterEmail);
-              return S.of(context).enterEmail;
+              showCustomSnackbar(context, Localizely.of(context).enterEmail);
+              return Localizely.of(context).enterEmail;
             }
             // Regular expression for email validation
             final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
             if (!emailRegex.hasMatch(value)) {
-              showCustomSnackbar(context, S.of(context).invalidEmail);
-              return S.of(context).invalidEmail;
+              showCustomSnackbar(context, Localizely.of(context).invalidEmail);
+              return Localizely.of(context).invalidEmail;
             }
             return null;
           },

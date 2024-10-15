@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
+import 'package:spend_wise/core/widgets/custom_app_bar.dart';
+import 'package:spend_wise/core/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/features/Authentication/presentation/widgets/email_text_form_field.dart';
 import 'package:spend_wise/generated/l10n.dart';
@@ -18,19 +18,19 @@ class ForgotPasswordScreenBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             CustomAppBar(
-              text: S.of(context).forgotPassword,
+              text: Localizely.of(context).forgotPassword,
               onPressed: () => context.go('/loginScreen'),
             ),
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Text(
-                S.of(context).forgotPasswordDescription,
+                Localizely.of(context).forgotPasswordDescription,
                 style: TextStyle(color: AppColors.primaryFonts, fontSize: 24),
               ),
             ),
             EmailTextFormField(),
             GradientButton(
-                text: S.of(context).continueBtn,
+                text: Localizely.of(context).continueBtn,
                 onPressed: () => context.go('/emailSentScreen')),
           ],
         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/shared/widgets/custom_text_button.dart';
-import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
+import 'package:spend_wise/core/widgets/custom_app_bar.dart';
+import 'package:spend_wise/core/widgets/custom_text_button.dart';
+import 'package:spend_wise/core/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 import 'package:spend_wise/features/Authentication/presentation/widgets/email_text_form_field.dart';
@@ -22,7 +22,7 @@ class LoginScreenBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CustomAppBar(
-                text: S.of(context).login,
+                text: Localizely.of(context).login,
                 onPressed: () => context.go('/getstartedScreen'),
               ),
               const Image(image: AssetImage(ImgAssets.email)),
@@ -30,16 +30,16 @@ class LoginScreenBody extends StatelessWidget {
                   //  controller: context.read<LoginCubit>().loginEmailController,
                   ),
               PasswordTextField(
-                text: S.of(context).password,
+                text: Localizely.of(context).password,
               ),
               GradientButton(
-                  text: S.of(context).login,
+                  text: Localizely.of(context).login,
                   onPressed: () => context.go('/homeScreen')),
               CustomTextButton(
-                  text: S.of(context).forgotPasswordQuestion,
+                  text: Localizely.of(context).forgotPasswordQuestion,
                   onPressed: () => context.go('/forgotPasswordScreen')),
               CustomTextButton(
-                  text: S.of(context).forgotPasswordInstruction,
+                  text: Localizely.of(context).forgotPasswordInstruction,
                   onPressed: () => context.go('/signupScreen')),
             ],
           ),

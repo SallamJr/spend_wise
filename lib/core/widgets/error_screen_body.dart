@@ -23,14 +23,14 @@ class ErrorWidget extends StatelessWidget {
         Container(
           margin: const EdgeInsets.symmetric(vertical: 12),
           child: Text(
-            S.of(context).errorMsg,
+            Localizely.of(context).errorMsg,
             //AppLocalizations.of(context)!.translate('something_went_wrong')!,
             style: const TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.w700),
           ),
         ),
         Text(
-          S.of(context).tryAgain,
+          Localizely.of(context).tryAgain,
           // AppLocalizations.of(context)!.translate('try_again')!,
           style: TextStyle(
               color: AppColors.primaryFonts,
@@ -49,7 +49,7 @@ class ErrorWidget extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50))),
             child: Text(
-              S.of(context).errorScreen,
+              Localizely.of(context).errorScreen,
               // will be handle the localization ....
               //AppLocalizations.of(context)!.translate('reload_screen')!,
               style: const TextStyle(

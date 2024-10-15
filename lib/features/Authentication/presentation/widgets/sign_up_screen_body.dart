@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/shared/widgets/custom_text_button.dart';
-import 'package:spend_wise/core/shared/widgets/custom_text_form_field.dart';
-import 'package:spend_wise/core/shared/widgets/gradient_button.dart';
+import 'package:spend_wise/core/widgets/custom_app_bar.dart';
+import 'package:spend_wise/core/widgets/custom_text_button.dart';
+import 'package:spend_wise/core/widgets/custom_text_form_field.dart';
+import 'package:spend_wise/core/widgets/gradient_button.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/features/Authentication/presentation/widgets/email_text_form_field.dart';
 import 'package:spend_wise/features/Authentication/presentation/widgets/google_sign_with.dart';
@@ -23,35 +23,35 @@ class SignUpScreenBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 CustomAppBar(
-                    text: S.of(context).signup,
+                    text: Localizely.of(context).signup,
                     onPressed: () => context.go('/getstartedScreen')),
-                CustomTextFormField(text: S.of(context).firstName),
-                CustomTextFormField(text: S.of(context).lastName),
+                CustomTextFormField(text: Localizely.of(context).firstName),
+                CustomTextFormField(text: Localizely.of(context).lastName),
                 EmailTextFormField(),
                 PasswordTextField(
-                  text: S.of(context).password,
+                  text: Localizely.of(context).password,
                 ),
                 PasswordTextField(
-                  text: S.of(context).confirmPassword,
+                  text: Localizely.of(context).confirmPassword,
                 ),
                 GradientButton(
-                    text: S.of(context).signup,
+                    text: Localizely.of(context).signup,
                     onPressed: () => context.go('/homeScreen')),
                 const SizedBox(
                   height: 8,
                 ),
                 Text(
-                  S.of(context).orWith,
+                  Localizely.of(context).orWith,
                   style: TextStyle(
                       color: AppColors.secondaryFonts,
                       fontWeight: FontWeight.w600,
                       fontSize: 15),
                 ),
                 GoogleSignWith(
-                    text: S.of(context).googleSignWith,
+                    text: Localizely.of(context).googleSignWith,
                     onPressed: () => context.go('/homeScreen')),
                 CustomTextButton(
-                    text: S.of(context).havingAccount,
+                    text: Localizely.of(context).havingAccount,
                     onPressed: () => context.go('/loginScreen')),
               ],
             ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/shared/widgets/custom_app_bar.dart';
+import 'package:spend_wise/core/widgets/custom_app_bar.dart';
 import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/features/settings/presentation/widgets/custom_list_tile.dart';
 import 'package:spend_wise/generated/l10n.dart';
@@ -17,12 +17,12 @@ class ProfileSettingsScreenBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             CustomAppBar(
-              text: S.of(context).profileSettings,
+              text: Localizely.of(context).profileSettings,
               onPressed: () => context.go('/settingsScreen'),
             ),
             const SizedBox(height: 20),
             CustomListTile(
-              text: S.of(context).language,
+              text: Localizely.of(context).language,
               onPressed: () => context.go('/languageScreen'),
               icon: Icons.language,
             ),
@@ -31,7 +31,7 @@ class ProfileSettingsScreenBody extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             CustomListTile(
-              text: S.of(context).currency,
+              text: Localizely.of(context).currency,
               onPressed: () => context.go('/currencyScreen'),
               icon: Icons.currency_exchange,
             ),
@@ -40,7 +40,7 @@ class ProfileSettingsScreenBody extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             CustomListTile(
-                text: S.of(context).themes,
+                text: Localizely.of(context).themes,
                 onPressed: () => context.go('/themesScreen'),
                 icon: Icons.light_mode),
           ],
