@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   final String text;
-   CustomTextFormField({super.key, required this.text});
+  CustomTextFormField({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -13,23 +12,26 @@ class CustomTextFormField extends StatelessWidget {
       child: Form(
         key: formKey,
         child: TextFormField(
-          cursorColor: AppColors.primaryButtons,
+          cursorColor: Theme.of(context).colorScheme.surface,
           decoration: InputDecoration(
             hintText: text,
-            hintStyle:  TextStyle(color:AppColors.secondaryFonts),
+            hintStyle: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
             filled: true,
-            fillColor: AppColors.primary,
+            fillColor: Theme.of(context).colorScheme.primary,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: AppColors.primaryButtons),
+              borderSide:
+                  BorderSide(color: Theme.of(context).colorScheme.surface),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: AppColors.primaryButtons),
+              borderSide:
+                  BorderSide(color: Theme.of(context).colorScheme.surface),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: AppColors.primaryButtons),
+              borderSide:
+                  BorderSide(color: Theme.of(context).colorScheme.surface),
             ),
           ),
         ),

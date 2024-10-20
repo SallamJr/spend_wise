@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/features/settings/presentation/widgets/custom_list_tile.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
@@ -11,7 +10,7 @@ class ProfileSettingsScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -27,7 +26,7 @@ class ProfileSettingsScreenBody extends StatelessWidget {
               icon: Icons.language,
             ),
             Divider(
-              color: AppColors.unSelectedIcons,
+              color: Theme.of(context).colorScheme.outline,
             ),
             const SizedBox(height: 20),
             CustomListTile(
@@ -36,7 +35,7 @@ class ProfileSettingsScreenBody extends StatelessWidget {
               icon: Icons.currency_exchange,
             ),
             Divider(
-              color: AppColors.unSelectedIcons,
+              color: Theme.of(context).colorScheme.outline,
             ),
             const SizedBox(height: 20),
             CustomListTile(

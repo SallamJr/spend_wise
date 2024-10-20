@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spend_wise/core/controllers/theme_cubit.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 
 class ThemeSelection extends StatefulWidget {
   const ThemeSelection({super.key});
@@ -32,7 +31,7 @@ class ThemeSelectionState extends State<ThemeSelection> {
       title: Text(
         name,
         style: TextStyle(
-          color: AppColors.primaryFonts,
+          color: Theme.of(context).colorScheme.onPrimary,
           fontWeight: FontWeight.bold,
           fontSize: 18,
         ),
@@ -40,7 +39,7 @@ class ThemeSelectionState extends State<ThemeSelection> {
       trailing: Radio(
         value: value,
         groupValue: selectedTheme,
-        activeColor: AppColors.pressedIcons,
+        activeColor: Theme.of(context).colorScheme.onPrimaryContainer,
         onChanged: (String? newValue) {
           setState(() {
             selectedTheme = newValue!;

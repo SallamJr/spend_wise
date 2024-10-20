@@ -28,13 +28,12 @@ class MyApp extends StatelessWidget {
       ],
       child: Builder(
         builder: (context) {
-          final localizationThemeState =
-              context.watch<LocalizationCubit>().state;
-               final themeState = context.watch<ThemeCubit>().state;
+          final localizationState = context.watch<LocalizationCubit>().state;
+          final themeState = context.watch<ThemeCubit>().state;
           return MaterialApp.router(
             routerConfig: router,
             debugShowCheckedModeBanner: false,
-            locale: localizationThemeState.locale,
+            locale: localizationState.locale,
             supportedLocales: const [
               Locale('en', ''), // English
               Locale('ar', ''), // Arabic

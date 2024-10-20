@@ -19,7 +19,7 @@ class Localizely {
 
   static Localizely get current {
     assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+        'No instance of Localizely was loaded. Try to initialize the Localizely delegate before accessing Localizely.current.');
     return _current!;
   }
 
@@ -42,7 +42,7 @@ class Localizely {
   static Localizely of(BuildContext context) {
     final instance = Localizely.maybeOf(context);
     assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+        'No instance of Localizely present in the widget tree. Did you add Localizely.delegate in localizationsDelegates?');
     return instance!;
   }
 
