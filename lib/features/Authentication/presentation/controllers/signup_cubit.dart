@@ -6,9 +6,9 @@ import 'package:spend_wise/core/api/api_consumer.dart';
 import 'package:spend_wise/core/api/end_points.dart';
 import 'package:spend_wise/core/error/exceptiopns.dart';
 import 'package:spend_wise/core/helpers/cache_helper.dart';
-import 'package:spend_wise/core/helpers/enums.dart';
-import 'package:spend_wise/features/Authentication/data/models/signup_model.dart';
-import 'package:spend_wise/features/Authentication/data/repositories/auth_repository.dart';
+import 'package:spend_wise/core/utils/enums.dart';
+import 'package:spend_wise/features/authentication/data/models/signup_model.dart';
+import 'package:spend_wise/features/authentication/data/repositories/auth_repository.dart';
 part 'signup_state.dart';
 class SignupCubit extends Cubit<SignupState> {
   SignupCubit({this.api, this.authRepo}) : super(SignupState.initial());

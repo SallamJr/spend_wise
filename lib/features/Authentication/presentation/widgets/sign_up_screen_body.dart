@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/widgets/custom_text_button.dart';
-import 'package:spend_wise/core/widgets/custom_text_form_field.dart';
-import 'package:spend_wise/core/widgets/gradient_button.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/email_text_form_field.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/google_sign_with.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/password_text_field.dart';
+import 'package:spend_wise/core/components/custom_app_bar.dart';
+import 'package:spend_wise/core/components/custom_text_button.dart';
+import 'package:spend_wise/core/components/custom_text_form_field.dart';
+import 'package:spend_wise/core/components/gradient_button.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/email_text_form_field.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/google_sign_with.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/password_text_field.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
 class SignUpScreenBody extends StatelessWidget {

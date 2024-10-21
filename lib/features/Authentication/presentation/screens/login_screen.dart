@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:spend_wise/core/helpers/enums.dart';
-import 'package:spend_wise/features/Authentication/presentation/controllers/login_cubit.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/login_screen_body.dart';
+import 'package:spend_wise/core/utils/enums.dart';
+import 'package:spend_wise/features/authentication/presentation/controllers/login_cubit.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/login_screen_body.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

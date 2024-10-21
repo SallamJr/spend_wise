@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/widgets/custom_bottom_nav_bar.dart';
+import 'package:spend_wise/core/components/custom_app_bar.dart';
+import 'package:spend_wise/core/components/custom_bottom_nav_bar.dart';
 import 'package:spend_wise/features/settings/presentation/widgets/custom_list_tile.dart';
 import 'package:spend_wise/generated/l10n.dart';
 

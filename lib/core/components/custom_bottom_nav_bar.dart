@@ -13,7 +13,7 @@ class CustomBottomNavBar extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.secondaryContainer,
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.9),
           borderRadius: BorderRadius.circular(30.0),
         ),
         width: double.infinity,
@@ -30,8 +30,8 @@ class CustomBottomNavBar extends StatelessWidget {
           gap: 8, // Gap between icon and text
           color: Theme.of(context)
               .colorScheme
-              .primary
-              .withOpacity(0.5), // Unselected icon and text color
+              .secondaryContainer
+              , // Unselected icon and text color
           activeColor: Theme.of(context).colorScheme.onPrimaryContainer,
           // Colors.red,        // Selected icon and text color
           iconSize: 32, // Icon size

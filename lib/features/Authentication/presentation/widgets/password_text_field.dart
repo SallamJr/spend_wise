@@ -29,7 +29,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
           hintStyle:
               TextStyle(color: Theme.of(context).colorScheme.onSecondary),
           filled: true,
-          fillColor: Colors.white,
+          fillColor:Theme.of(context).colorScheme.primary,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30.0),
             borderSide:

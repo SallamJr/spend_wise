@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/widgets/gradient_button.dart';
+import 'package:spend_wise/core/components/custom_app_bar.dart';
+import 'package:spend_wise/core/components/gradient_button.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 import 'package:spend_wise/generated/l10n.dart';
 

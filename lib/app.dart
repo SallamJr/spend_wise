@@ -5,7 +5,7 @@ import 'package:spend_wise/config/themes/app_theme.dart';
 import 'package:spend_wise/core/controllers/localization_cubit.dart';
 import 'package:spend_wise/core/controllers/theme_cubit.dart';
 import 'package:spend_wise/di.dart' as di;
-import 'package:spend_wise/features/Authentication/presentation/controllers/login_cubit.dart';
+import 'package:spend_wise/features/authentication/presentation/controllers/login_cubit.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           create: (context) => di.locator<LoginCubit>(),
         ),
         BlocProvider(
-          create: (context) => di.locator<LocalizationCubit>(),
+          create: (context) => di.locator<LocalizationCubit>()..loadCachedLocale(),
         ),
         BlocProvider(
           create: (context) =>

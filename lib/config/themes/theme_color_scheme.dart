@@ -23,7 +23,7 @@ ColorScheme lightColorScheme = ColorScheme(
   tertiaryContainer:
       AppColors.secondaryIconsLightMode, // Background for tertiary elements
   onTertiaryContainer:
-      AppColors.hintBackgroundLightMode, // Text/icons on tertiary container
+      AppColors.secondaryLightMode.withAlpha(50), // Text/icons on tertiary container
   error: AppColors.hintBackgroundLightMode, // Error color
   errorContainer: AppColors.hintBackgroundLightMode, // Background for error
   onError: AppColors.primaryLightMode, // Text/icons on error

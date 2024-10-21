@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/features/onBoarding/presentation/widgets/onboarding_screen_body.dart';
+import 'package:spend_wise/features/onboarding/presentation/widgets/onboarding_screen_body.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
