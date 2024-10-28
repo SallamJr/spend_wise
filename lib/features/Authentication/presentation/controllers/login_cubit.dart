@@ -13,13 +13,13 @@ part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit({
-    this.api,
-    this.authRepository,
+    required this.api,
+    required this.authRepository,
   }) : super(
           LoginState.initial(),
         );
-  final BaseApiConsumer? api;
-  final BaseAuthRepository? authRepository;
+  final BaseApiConsumer api;
+  final BaseAuthRepository authRepository;
   LoginModel? loginUser;
 
   final loginEmailController = TextEditingController();
@@ -34,12 +34,12 @@ class LoginCubit extends Cubit<LoginState> {
           status: GenericStatus.loading,
         ),
       );
-      final loginResponse = await api?.post(EndPoints.loginUrl, body: {
+      final loginResponse = await api.post(EndPoints.loginUrl, body: {
         ApiKeys.userAuthEmail: loginEmailController.text,
         ApiKeys.userAuthPassword: loginPasswordController.text,
       });
 
-      loginResponse!.fold(
+      loginResponse.fold(
         (error) {
           // Handle the error case
           emit(state.copyWith(status: GenericStatus.error, message: error));

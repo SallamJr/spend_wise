@@ -22,7 +22,7 @@ final locator = GetIt.instance;
 Future<void> setup() async {
   //! External
   // Shared Preferences
-  final prefs = await SharedPreferences.getInstance();
+  final prefs = await SharedPreferences.getInstance(); 
   locator.registerLazySingleton(
     () => prefs,
   );
@@ -80,8 +80,7 @@ Future<void> setup() async {
   //login cubit
   locator.registerLazySingleton(
     () => LoginCubit(
-      api: locator(),
-      authRepository: locator(),
+      authRepository: locator(), api: locator(),  
     ),
   );
   // home cubit
