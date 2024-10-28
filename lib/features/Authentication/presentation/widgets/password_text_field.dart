@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 
 class PasswordTextField extends StatefulWidget {
   final String text;
@@ -27,25 +26,29 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
         obscureText: _obscureText,
         decoration: InputDecoration(
           hintText: widget.text,
-          hintStyle:  TextStyle(color: AppColors.secondaryFonts),
+          hintStyle:
+              TextStyle(color: Theme.of(context).colorScheme.onSecondary),
           filled: true,
-          fillColor: Colors.white,
+          fillColor:Theme.of(context).colorScheme.primary,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30.0),
-            borderSide:  BorderSide(color:  AppColors.primaryButtons),
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.surface),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30.0),
-            borderSide:  BorderSide(color: AppColors.primaryButtons),
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.surface),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30.0),
-            borderSide:  BorderSide(color: AppColors.primaryButtons),
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.surface),
           ),
           suffixIcon: IconButton(
             icon: Icon(
               _obscureText ? Icons.visibility : Icons.visibility_off,
-              color:  AppColors.primaryButtons,
+              color: Theme.of(context).colorScheme.surface,
             ),
             onPressed: _togglePasswordVisibility,
           ),

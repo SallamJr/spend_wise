@@ -7,9 +7,9 @@ import 'package:spend_wise/core/api/dio_consumer.dart';
 import 'package:spend_wise/core/controllers/localization_cubit.dart';
 import 'package:spend_wise/core/controllers/theme_cubit.dart';
 import 'package:spend_wise/core/helpers/network_info.dart';
-import 'package:spend_wise/features/Authentication/data/repositories/auth_repository.dart';
-import 'package:spend_wise/features/Authentication/presentation/controllers/login_cubit.dart';
-import 'package:spend_wise/features/Authentication/presentation/controllers/signup_cubit.dart';
+import 'package:spend_wise/features/authentication/data/repositories/auth_repository.dart';
+import 'package:spend_wise/features/authentication/presentation/controllers/login_cubit.dart';
+import 'package:spend_wise/features/authentication/presentation/controllers/signup_cubit.dart';
 import 'package:spend_wise/features/category/data/repositories/category_repository.dart';
 import 'package:spend_wise/features/category/presentation/controllers/category_cubit.dart';
 import 'package:spend_wise/features/expenses/data/repositories/expenses_repository.dart';
@@ -22,7 +22,7 @@ final locator = GetIt.instance;
 Future<void> setup() async {
   //! External
   // Shared Preferences
-  final prefs = await SharedPreferences.getInstance();
+  final prefs = await SharedPreferences.getInstance(); 
   locator.registerLazySingleton(
     () => prefs,
   );
@@ -80,8 +80,7 @@ Future<void> setup() async {
   //login cubit
   locator.registerLazySingleton(
     () => LoginCubit(
-      api: locator(),
-      authRepository: locator(),
+      authRepository: locator(), api: locator(),  
     ),
   );
   // home cubit

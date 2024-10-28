@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 
 class CustomCard extends StatelessWidget {
   final String text;
@@ -10,19 +9,19 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.secondaryBackground,
+      color: Theme.of(context).colorScheme.surface,
       margin: const EdgeInsets.all(16.0),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(text, style:  TextStyle(color: AppColors.pressedIcons,fontSize: 18,fontWeight: FontWeight.bold),),
+            Text(text, style:  TextStyle(color: Theme.of(context).colorScheme.primary,fontSize: 18,fontWeight: FontWeight.bold),),
              Row(
               children: [
-                Icon(Icons.edit_document, color: AppColors.primaryButtons,),
+                Icon(Icons.edit_document, color: Theme.of(context).colorScheme.primary,),
                 const SizedBox(width: 10.0),
-                 const Icon(Icons.delete, color: Colors.black26),
+                 const Icon(Icons.delete, color: Colors.black),
               ],
             ),
             

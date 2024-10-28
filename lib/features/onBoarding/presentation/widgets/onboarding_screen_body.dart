@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/gradient_button.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
+import 'package:spend_wise/core/components/gradient_button.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
@@ -11,7 +10,7 @@ class OnboardingScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       // appBar: CustomAppBar(text: "Spend Wise"),
       body: Center(
         child: Column(
@@ -21,7 +20,7 @@ class OnboardingScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).gainTotalControl,
               style: TextStyle(
-                color: AppColors.primaryFonts,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
               ),
@@ -29,7 +28,7 @@ class OnboardingScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).ofYourMoney,
               style: TextStyle(
-                color: AppColors.primaryFonts,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
               ),
@@ -40,7 +39,7 @@ class OnboardingScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).becomeYourOwnMoneyManager,
               style: TextStyle(
-                color: AppColors.secondaryFonts,
+                color: Theme.of(context).colorScheme.onSecondary,
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
               ),
@@ -48,7 +47,7 @@ class OnboardingScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).makeEveryCentCount,
               style: TextStyle(
-                color: AppColors.secondaryFonts,
+                color: Theme.of(context).colorScheme.onSecondary,
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
               ),

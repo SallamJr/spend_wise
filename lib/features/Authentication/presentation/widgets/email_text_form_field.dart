@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:spend_wise/core/functions/custom_snack_bar.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
 class EmailTextFormField extends StatelessWidget {
@@ -15,23 +14,26 @@ class EmailTextFormField extends StatelessWidget {
       child: Form(
         key: _formKey,
         child: TextFormField(
-          cursorColor: AppColors.primaryButtons,
+          cursorColor: Theme.of(context).colorScheme.surface,
           decoration: InputDecoration(
             hintText: Localizely.of(context).email,
-            hintStyle: TextStyle(color: AppColors.secondaryFonts),
+            hintStyle: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
             filled: true,
-            fillColor: AppColors.primary,
+            fillColor: Theme.of(context).colorScheme.primary,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide: BorderSide(color: AppColors.primaryButtons),
+              borderSide:
+                  BorderSide(color: Theme.of(context).colorScheme.surface),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide: BorderSide(color: AppColors.primaryButtons),
+              borderSide:
+                  BorderSide(color: Theme.of(context).colorScheme.surface),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30.0),
-              borderSide: BorderSide(color: AppColors.primaryButtons),
+              borderSide:
+                  BorderSide(color: Theme.of(context).colorScheme.surface),
             ),
           ),
           validator: (value) {

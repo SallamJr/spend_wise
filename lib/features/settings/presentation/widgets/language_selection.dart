@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spend_wise/core/controllers/localization_cubit.dart';
 import 'package:spend_wise/core/controllers/localization_state.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
 class LanguageSelection extends StatefulWidget {
@@ -18,7 +17,7 @@ class LanguageSelectState extends State<LanguageSelection> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    
+
     // Initialize languages list
     languages = [
       {
@@ -39,7 +38,7 @@ class LanguageSelectState extends State<LanguageSelection> {
           title: Text(
             name,
             style: TextStyle(
-              color: AppColors.primaryFonts,
+              color: Theme.of(context).colorScheme.onPrimary,
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),
@@ -47,23 +46,27 @@ class LanguageSelectState extends State<LanguageSelection> {
           subtitle: Text(
             '($code)',
             style: TextStyle(
-              color: AppColors.primaryFonts,
+              color: Theme.of(context).colorScheme.onPrimary,
               fontWeight: FontWeight.w400,
               fontSize: 12,
             ),
           ),
           trailing: Radio(
             value: code,
-            activeColor: AppColors.pressedIcons,
+            activeColor: Theme.of(context).colorScheme.onPrimaryContainer,
             groupValue: state.locale.languageCode, // Use cubit's locale
             onChanged: (String? value) {
               if (value != null) {
-                context.read<LocalizationCubit>().changeLocale(Locale(value)); // Change the locale
+                context
+                    .read<LocalizationCubit>()
+                    .changeLocale(Locale(value)); // Change the locale
               }
             },
           ),
           onTap: () {
-            context.read<LocalizationCubit>().changeLocale(Locale(code)); // Change on tap
+            context
+                .read<LocalizationCubit>()
+                .changeLocale(Locale(code)); // Change on tap
           },
         );
       },
@@ -83,4 +86,3 @@ class LanguageSelectState extends State<LanguageSelection> {
     );
   }
 }
-

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 
 class CustomCheckbox extends StatefulWidget {
   const CustomCheckbox({super.key});
@@ -15,8 +14,8 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-      activeColor: AppColors.pressedIcons,
-      checkColor: AppColors.primaryFonts,
+      activeColor: Theme.of(context).colorScheme.onPrimaryContainer,
+      checkColor: Theme.of(context).colorScheme.primary,
       value: _isChecked,
       onChanged: (bool? value) {
         setState(() {

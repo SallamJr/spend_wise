@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 
 class GoogleSignWith extends StatelessWidget {
@@ -16,7 +15,7 @@ class GoogleSignWith extends StatelessWidget {
          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30.0),
             gradient: LinearGradient(
-              colors: [AppColors.primary, AppColors.primary],
+              colors: [Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.primary],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -26,9 +25,9 @@ class GoogleSignWith extends StatelessWidget {
         ElevatedButton(
               
               style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primary,
+              backgroundColor: Theme.of(context).colorScheme.primary,
               //Colors.transparent,
-              shadowColor: AppColors.secondaryFonts,
+              shadowColor: Theme.of(context).colorScheme.onSecondary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0),
               ),
@@ -46,7 +45,7 @@ class GoogleSignWith extends StatelessWidget {
                   Text(
                     text,
                     style: TextStyle(
-                      color: AppColors.primaryFonts,
+                      color: Theme.of(context).colorScheme.surface,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),

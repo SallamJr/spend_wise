@@ -5,7 +5,7 @@ import 'package:spend_wise/core/api/api_consumer.dart';
 import 'package:spend_wise/core/api/end_points.dart';
 import 'package:spend_wise/core/error/exceptiopns.dart';
 import 'package:spend_wise/core/helpers/cache_helper.dart';
-import 'package:spend_wise/core/helpers/enums.dart';
+import 'package:spend_wise/core/utils/enums.dart';
 import 'package:spend_wise/features/category/data/models/category_model.dart';
 import 'package:spend_wise/features/category/data/repositories/category_repository.dart';
 

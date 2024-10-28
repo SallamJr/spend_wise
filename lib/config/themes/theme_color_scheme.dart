@@ -3,77 +3,98 @@ import 'package:spend_wise/core/utils/app_colors.dart';
 
 ColorScheme lightColorScheme = ColorScheme(
   brightness: Brightness.light,
-  primary: AppColors.primaryBackground, // Primary app color
-  onPrimary: AppColors.primaryFonts, // Text/icons on primary
-  primaryContainer: AppColors.secondaryBackground, // Background for primary
-  onPrimaryContainer: AppColors.primaryFonts, // Text/icons on primary container
-  secondary: AppColors.primaryButtons, // Secondary elements like buttons
-  onSecondary: AppColors.primaryFonts, // Text/icons on secondary
-  secondaryContainer:
-      AppColors.secondaryBackground, // Background for secondary elements
+  primary: AppColors.primaryLightMode, // Primary app color
+  onPrimary: AppColors.primaryFontsLightMode, // Text/icons on primary
+  primaryContainer:
+      AppColors.primaryBackgroundLightMode, // Background for primary
+  onPrimaryContainer:
+      AppColors.pressedIconsLightMode, // Text/icons on primary container
+  secondary:
+      AppColors.primaryButtonsLightMode, // Secondary elements like buttons
+  onSecondary: AppColors.secondaryFontsLightMode, // Text/icons on secondary
+  secondaryContainer: AppColors
+      .secondaryBackgroundLightMode, // Background for secondary elements
   onSecondaryContainer:
-      AppColors.primaryFonts, // Text/icons on secondary container
-  tertiary: AppColors.secondaryButtons, // Accent or additional secondary colors
-  onTertiary: AppColors.primaryFonts, // Text/icons on tertiary elements
+      AppColors.backgroundIconsLightMode, // Text/icons on secondary container
+  tertiary: AppColors
+      .secondaryLightMode, // Accent or additional secondary colors
+  onTertiary:
+      AppColors.primaryFontsLightMode, // Text/icons on tertiary elements
   tertiaryContainer:
-      AppColors.secondaryIcons, // Background for tertiary elements
+      AppColors.secondaryIconsLightMode, // Background for tertiary elements
   onTertiaryContainer:
-      AppColors.primaryFonts, // Text/icons on tertiary container
-  error: AppColors.hintBackground, // Error color
-  errorContainer: AppColors.hintBackground, // Background for error
-  onError: AppColors.primary, // Text/icons on error
-  onErrorContainer: AppColors.primaryFonts, // Text/icons on error container
-  surface: AppColors.primary, // Surface (e.g., cards, sheets)
-  onSurface: AppColors.primaryFonts, // Text/icons on surface
-  surfaceContainerHighest: AppColors.primary, // Top layer for surfaces
-  onSurfaceVariant: AppColors.secondaryFonts, // Text/icons on a variant surface
-  outline: AppColors.secondaryFonts, // Outlines and borders
+      AppColors.secondaryLightMode.withAlpha(50), // Text/icons on tertiary container
+  error: AppColors.hintBackgroundLightMode, // Error color
+  errorContainer: AppColors.hintBackgroundLightMode, // Background for error
+  onError: AppColors.primaryLightMode, // Text/icons on error
+  onErrorContainer:
+      AppColors.primaryFontsLightMode, // Text/icons on error container
+  surface: AppColors.primaryButtonsLightMode, // Surface (e.g., cards, sheets)
+  onSurface: AppColors.primaryFontsLightMode, // Text/icons on surface
+  surfaceContainerHighest: AppColors.primaryLightMode, // Top layer for surfaces
+  onSurfaceVariant:
+      AppColors.secondaryButtonsLightMode, // Text/icons on a variant surface
+  outline: AppColors.unSelectedIconsLightMode, // Outlines and borders
   onInverseSurface:
-      AppColors.secondaryFonts, // Text/icons on an inverted surface
-  inverseSurface:
-      AppColors.secondaryBackground, // Inverse surface (used in contrasts)
-  inversePrimary: AppColors.primaryFonts, // Primary color in inverse mode
-  shadow: AppColors.pressedIcons, // Shadow color
-  surfaceTint: AppColors.primaryBackground, // Tint for surfaces
-  outlineVariant: AppColors.secondaryFonts, // Outlines for variants
-  scrim: AppColors.pressedIcons, // Scrim or overlay color
+      AppColors.secondaryFontsLightMode, // Text/icons on an inverted surface
+  inverseSurface: AppColors
+      .secondaryBackgroundLightMode, // Inverse surface (used in contrasts)
+  inversePrimary:
+      AppColors.primaryFontsLightMode, // Primary color in inverse mode
+  shadow: AppColors.pressedIconsLightMode, // Shadow color
+  surfaceTint: AppColors.primaryBackgroundLightMode, // Tint for surfaces
+  outlineVariant: AppColors.secondaryFontsLightMode, // Outlines for variants
+  scrim: AppColors.pressedIconsLightMode, // Scrim or overlay color
 );
 
 ColorScheme darkColorScheme = ColorScheme(
   brightness: Brightness.dark,
-  primary: AppColors.secondaryButtons, // Primary color in dark mode
-  onPrimary: AppColors.backgroundIcons, // Text/icons on primary in dark mode
-  primaryContainer: AppColors.pressedIcons, // Container color for primary
+  primary: AppColors.primaryDarkMode,
+  //AppColors.secondaryButtons, // Primary color in dark mode
+  onPrimary:
+      AppColors.backgroundIconsDarkMode, // Text/icons on primary in dark mode
+  primaryContainer:
+      AppColors.pressedIconsDarkMode, // Container color for primary
   onPrimaryContainer:
-      AppColors.secondaryIcons, // Text/icons on primary container
-  secondary: AppColors.primaryButtons, // Secondary elements like buttons
-  onSecondary: AppColors.primaryFonts, // Text/icons on secondary in dark mode
-  secondaryContainer:
-      AppColors.secondaryIcons, // Container color for secondary elements
+      AppColors.secondaryIconsDarkMode, // Text/icons on primary container
+  secondary:
+      AppColors.primaryButtonsDarkMode, // Secondary elements like buttons
+  onSecondary:
+      AppColors.primaryFontsDarkMode, // Text/icons on secondary in dark mode
+  secondaryContainer: AppColors
+      .secondaryIconsDarkMode, // Container color for secondary elements
   onSecondaryContainer:
-      AppColors.primaryFonts, // Text/icons on secondary container
-  tertiary: AppColors.pressedIcons, // Tertiary color in dark mode
-  onTertiary: AppColors.backgroundIcons, // Text/icons on tertiary elements
+      AppColors.primaryFontsDarkMode, // Text/icons on secondary container
+  tertiary: AppColors.pressedIconsDarkMode, // Tertiary color in dark mode
+  onTertiary:
+      AppColors.backgroundIconsDarkMode, // Text/icons on tertiary elements
   tertiaryContainer:
-      AppColors.primaryCards, // Container color for tertiary elements
+      AppColors.primaryCardsDarkMode, // Container color for tertiary elements
   onTertiaryContainer:
-      AppColors.primaryFonts, // Text/icons on tertiary container
-  error: AppColors.hintBackground, // Error color
-  errorContainer: AppColors.secondaryIcons, // Background for error in dark mode
-  onError: AppColors.primary, // Text/icons on error
-  onErrorContainer: AppColors.primaryFonts, // Text/icons on error container
-  surface: AppColors.primaryBackground, // Surface color in dark mode
-  onSurface: AppColors.secondaryFonts, // Text/icons on surface in dark mode
-  surfaceContainerHighest: AppColors.secondaryIcons, // Top layer for surfaces
-  onSurfaceVariant: AppColors.secondaryFonts, // Text/icons on a variant surface
-  outline: AppColors.primaryFonts, // Outlines in dark mode
+      AppColors.primaryFontsDarkMode, // Text/icons on tertiary container
+  error: AppColors.hintBackgroundDarkMode, // Error color
+  errorContainer:
+      AppColors.secondaryIconsDarkMode, // Background for error in dark mode
+  onError: AppColors.primaryDarkMode, // Text/icons on error
+  onErrorContainer:
+      AppColors.primaryFontsDarkMode, // Text/icons on error container
+  surface: AppColors.primaryBackgroundDarkMode, // Surface color in dark mode
+  onSurface:
+      AppColors.secondaryFontsDarkMode, // Text/icons on surface in dark mode
+  surfaceContainerHighest:
+      AppColors.secondaryIconsDarkMode, // Top layer for surfaces
+  onSurfaceVariant:
+      AppColors.secondaryFontsDarkMode, // Text/icons on a variant surface
+  outline: AppColors.primaryFontsDarkMode, // Outlines in dark mode
   onInverseSurface:
-      AppColors.secondaryFonts, // Text/icons on an inverted surface
-  inverseSurface:
-      AppColors.primaryBackground, // Inverse surface (used in contrasts)
-  inversePrimary: AppColors.primaryFonts, // Primary color in inverse mode
-  shadow: AppColors.pressedIcons, // Shadow color in dark mode
-  surfaceTint: AppColors.secondaryButtons, // Tint for surfaces in dark mode
-  outlineVariant: AppColors.secondaryFonts, // Outlines for variants
-  scrim: AppColors.pressedIcons, // Scrim or overlay color
+      AppColors.secondaryFontsDarkMode, // Text/icons on an inverted surface
+  inverseSurface: AppColors
+      .primaryBackgroundDarkMode, // Inverse surface (used in contrasts)
+  inversePrimary:
+      AppColors.primaryFontsDarkMode, // Primary color in inverse mode
+  shadow: AppColors.pressedIconsDarkMode, // Shadow color in dark mode
+  surfaceTint:
+      AppColors.secondaryButtonsDarkMode, // Tint for surfaces in dark mode
+  outlineVariant: AppColors.secondaryFontsDarkMode, // Outlines for variants
+  scrim: AppColors.pressedIconsDarkMode, // Scrim or overlay color
 );

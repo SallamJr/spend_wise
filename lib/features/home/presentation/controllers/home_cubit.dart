@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:spend_wise/core/api/api_consumer.dart';
 import 'package:spend_wise/core/api/end_points.dart';
 import 'package:spend_wise/core/helpers/cache_helper.dart';
-import 'package:spend_wise/core/helpers/enums.dart';
+import 'package:spend_wise/core/utils/enums.dart';
 import 'package:spend_wise/features/home/data/models/home_model.dart';
 import 'package:spend_wise/features/home/data/repositories/home_repository.dart';
 

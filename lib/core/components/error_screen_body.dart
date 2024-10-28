@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
 import 'package:spend_wise/core/utils/media_query_values.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
@@ -16,7 +15,7 @@ class ErrorWidget extends StatelessWidget {
         Center(
           child: Icon(
             Icons.warning_amber_rounded,
-            color: AppColors.primaryCards,
+            color: Theme.of(context).colorScheme.primary,
             size: 150,
           ),
         ),
@@ -31,9 +30,8 @@ class ErrorWidget extends StatelessWidget {
         ),
         Text(
           Localizely.of(context).tryAgain,
-          // AppLocalizations.of(context)!.translate('try_again')!,
           style: TextStyle(
-              color: AppColors.primaryFonts,
+              color: Theme.of(context).colorScheme.primary,
               fontSize: 18,
               fontWeight: FontWeight.w500),
         ),
@@ -43,7 +41,7 @@ class ErrorWidget extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 15),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.secondaryBackground,
+                backgroundColor: Theme.of(context).colorScheme.primary,
                 foregroundColor: Theme.of(context).primaryColor,
                 elevation: 500,
                 shape: RoundedRectangleBorder(

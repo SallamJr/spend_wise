@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:spend_wise/core/api/api_consumer.dart';
 import 'package:spend_wise/core/api/end_points.dart';
-import 'package:spend_wise/features/Authentication/data/models/login_model.dart';
-import 'package:spend_wise/features/Authentication/data/models/signup_model.dart';
+import 'package:spend_wise/features/authentication/data/models/login_model.dart';
+import 'package:spend_wise/features/authentication/data/models/signup_model.dart';
 
 abstract class BaseAuthRepository {
   Future<Either<String, LoginResponseModel>> login({

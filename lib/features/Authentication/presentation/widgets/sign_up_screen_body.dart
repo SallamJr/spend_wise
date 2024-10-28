@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/widgets/custom_text_button.dart';
-import 'package:spend_wise/core/widgets/custom_text_form_field.dart';
-import 'package:spend_wise/core/widgets/gradient_button.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/email_text_form_field.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/google_sign_with.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/password_text_field.dart';
+import 'package:spend_wise/core/components/custom_app_bar.dart';
+import 'package:spend_wise/core/components/custom_text_button.dart';
+import 'package:spend_wise/core/components/custom_text_form_field.dart';
+import 'package:spend_wise/core/components/gradient_button.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/email_text_form_field.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/google_sign_with.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/password_text_field.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
 class SignUpScreenBody extends StatelessWidget {
@@ -17,7 +16,7 @@ class SignUpScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: AppColors.primary,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -43,7 +42,7 @@ class SignUpScreenBody extends StatelessWidget {
                 Text(
                   Localizely.of(context).orWith,
                   style: TextStyle(
-                      color: AppColors.secondaryFonts,
+                      color: Theme.of(context).colorScheme.onSecondary,
                       fontWeight: FontWeight.w600,
                       fontSize: 15),
                 ),

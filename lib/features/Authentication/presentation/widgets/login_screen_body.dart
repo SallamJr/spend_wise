@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/custom_app_bar.dart';
-import 'package:spend_wise/core/widgets/custom_text_button.dart';
-import 'package:spend_wise/core/widgets/gradient_button.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
+import 'package:spend_wise/core/components/custom_app_bar.dart';
+import 'package:spend_wise/core/components/custom_text_button.dart';
+import 'package:spend_wise/core/components/gradient_button.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/email_text_form_field.dart';
-import 'package:spend_wise/features/Authentication/presentation/widgets/password_text_field.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/email_text_form_field.dart';
+import 'package:spend_wise/features/authentication/presentation/widgets/password_text_field.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
 class LoginScreenBody extends StatelessWidget {
@@ -16,7 +15,7 @@ class LoginScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.primary,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

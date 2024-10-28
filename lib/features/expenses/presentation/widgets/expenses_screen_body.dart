@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/custom_bottom_nav_bar.dart';
-import 'package:spend_wise/core/widgets/custom_check_box.dart';
-import 'package:spend_wise/core/widgets/custom_text_form_field.dart';
-import 'package:spend_wise/core/widgets/gradient_button.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
+import 'package:spend_wise/core/components/custom_bottom_nav_bar.dart';
+import 'package:spend_wise/core/components/custom_check_box.dart';
+import 'package:spend_wise/core/components/custom_text_form_field.dart';
+import 'package:spend_wise/core/components/gradient_button.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
-import '../../../../core/widgets/custom_app_bar.dart';
+import '../../../../core/components/custom_app_bar.dart';
 
 class ExpensesScreenBody extends StatelessWidget {
   const ExpensesScreenBody({super.key});
@@ -16,7 +15,7 @@ class ExpensesScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: const CustomBottomNavBar(),
-      backgroundColor: AppColors.primary,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -44,7 +43,9 @@ class ExpensesScreenBody extends StatelessWidget {
                   children: [
                     Text(
                       Localizely.of(context).expenses,
-                      style: TextStyle(color: AppColors.primaryFonts),
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.onPrimary,
+                          fontSize: 16),
                     ),
                     const CustomCheckbox(),
                   ]),

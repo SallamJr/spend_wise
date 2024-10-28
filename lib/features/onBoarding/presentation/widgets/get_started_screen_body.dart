@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spend_wise/core/widgets/gradient_button.dart';
-import 'package:spend_wise/core/utils/app_colors.dart';
+import 'package:spend_wise/core/components/gradient_button.dart';
 import 'package:spend_wise/core/utils/assets_manager.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
@@ -11,7 +10,7 @@ class GetStartedScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -20,7 +19,7 @@ class GetStartedScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).knowWhereYour,
               style: TextStyle(
-                color: AppColors.primaryFonts,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
               ),
@@ -28,7 +27,7 @@ class GetStartedScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).moneyGoes,
               style: TextStyle(
-                color: AppColors.primaryFonts,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
               ),
@@ -39,7 +38,7 @@ class GetStartedScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).trackYourTransactionEasily,
               style: TextStyle(
-                color: AppColors.secondaryFonts,
+                color: Theme.of(context).colorScheme.onSecondary,
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
               ),
@@ -47,7 +46,7 @@ class GetStartedScreenBody extends StatelessWidget {
             Text(
               Localizely.of(context).withCategoriesAndFinancialReport,
               style: TextStyle(
-                color: AppColors.secondaryFonts,
+                color: Theme.of(context).colorScheme.onSecondary,
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
               ),
