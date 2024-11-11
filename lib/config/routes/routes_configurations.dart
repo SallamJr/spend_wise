@@ -8,20 +8,27 @@ import 'package:spend_wise/features/authentication/presentation/screens/sign_up_
 import 'package:spend_wise/features/category/presentation/screens/category_screen.dart';
 import 'package:spend_wise/features/expenses/presentation/screens/expenses_screen.dart';
 import 'package:spend_wise/features/home/presentation/screens/home_screen.dart';
-import 'package:spend_wise/features/onboarding/presentation/screens/get_started_screen.dart';
+import 'package:spend_wise/core/unused/onboarding/screens/get_started_screen.dart';
 import 'package:spend_wise/features/onboarding/presentation/screens/onboarding_screen.dart';
-import 'package:spend_wise/features/onboarding/presentation/screens/welcome_screen.dart';
+import 'package:spend_wise/core/unused/onboarding/screens/welcome_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/currency_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/lanuage_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/profile_settings_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/settings_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/themes_screen.dart';
+import 'package:spend_wise/features/splash/presentation/screens/splash_screen.dart';
 final router = GoRouter(
   initialLocation: AppRoutes.initialRoute,
   routes: <RouteBase>[
-     GoRoute(
+      GoRoute(
       name: AppRoutes
           .initialRoute, // Optional, add name to your routes. Allows you navigate by name instead of path
+      path: '/splashScreen',
+      builder: (context, state) => const SplashScreen(),
+    ),
+     GoRoute(
+      name: AppRoutes
+          .welcomeRoute, // Optional, add name to your routes. Allows you navigate by name instead of path
       path: '/welcomeScreen',
       builder: (context, state) => const WelcomeScreen(),
     ),

@@ -11,7 +11,7 @@ class AppColors {
   static Color secondaryBackgroundLightMode = HexColor('#EEF8F7');
   static Color primaryFontsLightMode = HexColor('#438883');
   static Color secondaryFontsLightMode = HexColor('#91919F');
-  static Color primaryButtonsLightMode = HexColor('#69AEA9');
+  static Color primaryButtonsLightMode = HexColor('#207736');
   static Color secondaryButtonsLightMode = HexColor('#3F8782');
   static Color pressedIconsLightMode = HexColor('#1B5C58');
   static Color backgroundIconsLightMode = HexColor('#ECF9F8');

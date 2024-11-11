@@ -15,7 +15,7 @@ class GetStartedScreenBody extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(ImgAssets.getStarted),
+            Image.asset(ImgAssets.dateOnboard),
             Text(
               Localizely.of(context).knowWhereYour,
               style: TextStyle(

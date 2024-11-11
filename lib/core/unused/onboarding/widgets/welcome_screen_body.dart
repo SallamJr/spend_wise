@@ -16,7 +16,7 @@ class WelcomeScreenBody extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(ImgAssets.welcome),
+            Image.asset(ImgAssets.groupOnboard),
             Text(
               Localizely.of(context).appName,
               style: TextStyle(

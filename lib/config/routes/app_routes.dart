@@ -1,5 +1,6 @@
 class AppRoutes {
-  static const String initialRoute = '/welcomeScreen';
+  static const String initialRoute = '/splashScreen';
+  static const String welcomeRoute = '/welcomeScreen';
   static const String onboardingRoute = 'onboardingScreen';
   static const String getstartedRoute = 'GetStartedScreen';
   static const String loginRoute = '/loginScreen';
