@@ -13,7 +13,10 @@ import 'package:spend_wise/features/onboarding/presentation/screens/onboarding_s
 import 'package:spend_wise/features/onboarding/presentation/screens/welcome_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/currency_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/lanuage_screen.dart';
+import 'package:spend_wise/features/settings/presentation/screens/my_investments_screen.dart';
+import 'package:spend_wise/features/settings/presentation/screens/notifications_language_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/profile_settings_screen.dart';
+import 'package:spend_wise/features/settings/presentation/screens/return_requests_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/settings_screen.dart';
 import 'package:spend_wise/features/settings/presentation/screens/themes_screen.dart';
 final router = GoRouter(
@@ -107,6 +110,21 @@ final router = GoRouter(
       name: AppRoutes.themesRoute,
       path: '/themesScreen',
       builder: (context, state) => const ThemesScreen(),
+    ),
+     GoRoute(
+      name: AppRoutes.myInvestmentsRoute,
+      path: '/myInvestmentsScreen',
+      builder: (context, state) => const MyInvestmentsScreen(),
+    ),
+     GoRoute(
+      name: AppRoutes.retureRequestsRoute,
+      path: '/returnRequestsScreen',
+      builder: (context, state) => const ReturnRequestsScreen(),
+    ),
+     GoRoute(
+      name: AppRoutes.notificationsLanguageRoute,
+      path: '/notificationsLanguageScreen',
+      builder: (context, state) => const NotificationsLanguageScreen(),
     ),
     
   ],

@@ -15,4 +15,7 @@ class AppRoutes {
   static const String languageRoute = '/languageScreen';
   static const String currencyRoute = '/CurrencyScreen';
   static const String themesRoute = '/ThemesScreen';
+  static const String notificationsLanguageRoute = '/NotificationsLanguageScreen';
+  static const String myInvestmentsRoute = '/MyInvestmentsScreen';
+  static const String retureRequestsRoute = '/ReturnRequestsScreen';
 }
