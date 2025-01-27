@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/features/settings/presentation/widgets/themes_screen_body.dart';
+import 'package:spend_wise/features/settings/presentation/widgets/change_theme/themes_screen_body.dart';
 
 class ThemesScreen extends StatelessWidget {
   const ThemesScreen({super.key});

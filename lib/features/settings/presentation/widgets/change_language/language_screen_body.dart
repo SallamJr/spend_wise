@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:spend_wise/core/components/custom_app_bar.dart';
-import 'package:spend_wise/features/settings/presentation/widgets/language_selection.dart';
+import 'package:spend_wise/features/settings/presentation/widgets/change_language/language_selection.dart';
 import 'package:spend_wise/generated/l10n.dart';
 
 class LanguageScreenBody extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spend_wise/features/settings/presentation/widgets/settings_screen_body.dart';
+import 'package:spend_wise/features/settings/presentation/widgets/profile/settings_screen_body.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
